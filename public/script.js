@@ -26,16 +26,21 @@ document.getElementById("joinBtn").onclick = async () => {
 
   await start();
 
-var roomValue =
-document.getElementById("room").value;
+  var roomValue =
+  document.getElementById("room").value;
 
-var nameValue =
-document.getElementById("name").value;
+  var nameValue =
+  document.getElementById("name").value;
 
-socket.emit("join-room", {
-  room: roomValue,
-  name: nameValue
-});
+  socket.emit("join-room", {
+    room: roomValue,
+    name: nameValue
+  });
+
+  document.getElementById("join").style.display = "none";
+  document.getElementById("app").style.display = "block";
+
+};
 
   socket.emit("join-room", {
     room,
