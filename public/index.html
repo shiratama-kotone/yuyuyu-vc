@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="join">
+  <input id="name" placeholder="名前">
+  <input id="room" placeholder="ルームID">
+  <button id="joinBtn">参加</button>
+</div>
+
+<div id="app">
+
+  <div id="top">
+    <button id="mute">ミュート</button>
+    <button id="camera">カメラOFF</button>
+    <button id="share">画面共有</button>
+  </div>
+
+  <div id="videos"></div>
+
+  <div id="chat">
+    <div id="messages"></div>
+
+    <div id="chatInput">
+      <input id="msg">
+      <button id="send">送信</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
