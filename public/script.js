@@ -26,8 +26,16 @@ document.getElementById("joinBtn").onclick = async () => {
 
   await start();
 
-  var room = room.value;
-  var name = name.value;
+var roomValue =
+document.getElementById("room").value;
+
+var nameValue =
+document.getElementById("name").value;
+
+socket.emit("join-room", {
+  room: roomValue,
+  name: nameValue
+});
 
   socket.emit("join-room", {
     room,
